@@ -26,6 +26,6 @@ app.post('/message', async (req, res) => {
 });
 
 const PORT = config.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Google Workspace MCP server running on http://localhost:${PORT}/sse`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Google Workspace MCP server running on http://0.0.0.0:${PORT}/sse`);
 });
