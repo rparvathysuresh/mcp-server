@@ -11,6 +11,10 @@ app.use(cors());
 const mcpServer = createServer();
 let transport: SSEServerTransport;
 
+app.get('/', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/sse', async (req, res) => {
   console.log('Received connection on /sse');
   transport = new SSEServerTransport('/message', res);
